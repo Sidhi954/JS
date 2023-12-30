@@ -50,3 +50,19 @@ console.log(Object.values(instaUser))
 console.log(Object.entries(instaUser))
 console.log(instaUser.hasOwnProperty("roll"))
 
+
+//Object destructuring
+const course={
+    courseName:"Javascript",
+    courseId:"001",
+    coursePrice:499
+}
+
+console.log(course.courseId)
+//Now we will fetch the data by object destructuring
+const {coursePrice : price}=course
+
+//console.log(coursePrice)
+console.log(price)
+
+
