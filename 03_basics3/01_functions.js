@@ -21,3 +21,31 @@ function loggedIn(userName){
 
 //console.log(loggedIn("Sidhi")) //Instead of any name if don't pass anything then it will be undefined.
 console.log(loggedIn())
+
+
+//Rest Operator
+function calculateCartPrice(...num1){
+    return num1
+}
+console.log(calculateCartPrice(200,499,385,260))
+
+
+
+const user={
+    username:"Sidhi",
+    price:"999"
+}
+function handleObject(newobject){
+    console.log(`Username is ${newobject.username} and the price of object is ${newobject.price}`)
+}
+
+handleObject(user)
+
+//Array of an objects
+const arr=[8,6,2,3,9,1]
+function newarr(getArr){
+    console.log(getArr[1])
+}
+newarr(arr)
+
+
