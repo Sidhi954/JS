@@ -18,7 +18,7 @@ function nameAnm(){
 }
 nameAnm()  //This will give undefined as a result becoz we can only use this with objects.....
 
-//This with functions are not allowed
+//"This" with functions are not allowed
 
 
 
@@ -34,4 +34,4 @@ const myFun2=(num1,num2)=> num1+num2           //Without curly brace we don't ha
 console.log(myFun2(8,8))
 
 
-//we cannot use this with arrow function as well
+//we cannot use "this" with arrow function as well
