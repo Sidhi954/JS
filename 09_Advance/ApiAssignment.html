@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Assignment</title>
+    <style>
+      .card {
+        background: #fff;
+        font-family: Montserrat, sans-serif;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: bold;
+        color: #009688;
+        padding: 40px;
+        box-shadow: inset #009688 0 0 0 5px, inset #059c8e 0 0 0 1px,
+          inset #0cab9c 0 0 0 10px, inset #1fbdae 0 0 0 11px,
+          inset #8ce9ff 0 0 0 16px, inset #48e4d6 0 0 0 17px,
+          inset #e5f9f7 0 0 0 21px, inset #bfecf7 0 0 0 22px;
+        text-shadow: 3px 3px 1px #bfecf7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" style="width: 30%">
+      <img class="card-img-top" src="..." alt="avatar_url" />
+      <div class="card-body">
+        <h5 class="card-title" style="font-size: 30px"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const requestUrl = "https://api.github.com/users/Sidhi954";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl);
+    xhr.onreadystatechange = function () {
+      //console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        const imag = JSON.parse(this.responseText);
+        const data = JSON.parse(this.responseText);
+        const name = JSON.parse(this.responseText);
+        //console.log(typeof data);
+        //console.log(data.public_repos)
+        document
+          .querySelector(".card-img-top")
+          .setAttribute("src", `${data.avatar_url}`);
+        document.querySelector(
+          ".card-title"
+        ).innerHTML = `Username: ${data.login}`;
+        document.querySelector(
+          ".card-text"
+        ).innerHTML = `Total Repositories : ${data.public_repos}`;
+        //console.log(data.login)
+      }
+    };
+    //console.log("This");
+    xhr.send();
+  </script>
+</html>
