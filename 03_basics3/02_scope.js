@@ -35,7 +35,7 @@ if(true){
 
 
 
-//Hoisting in JS
+//Hoisting in JS:-Hoisting is JavaScript's default behavior of moving declarations to the top.
 console.log(add(7))
 function add(num1){
     return num1+1
@@ -46,3 +46,8 @@ function add(num1){
     return num1+1
 }
 console.log(addTwo(7))
+
+
+//hoisting does not occur on function expressions.
+console.log(name)    //Error:-"Cannot access 'name' before initialization"
+let name="raj"
