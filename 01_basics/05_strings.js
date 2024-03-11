@@ -40,3 +40,14 @@ console.log(sent.substring(0))
 const sent1="work hard with all your efforts"
 console.log(sent1.slice(2,9))
 console.log(sent1.slice(0))
+
+//splice:- first parameter takes the starting index from where the deletion will happen
+//second parameter contains the count till the deletion will happen
+let arr=[1,2,3,4,5,6,7]
+arr.splice(2,4)
+console.log(arr) //op:-[1,2,7]
+
+//if we don't pass the second parameter , it will remove from the start index to till end index.
+let arr2=[1,2,3,4,5,6,7,8]
+arr2.splice(3)
+console.log(arr2)   //op:-[1,2,3]
